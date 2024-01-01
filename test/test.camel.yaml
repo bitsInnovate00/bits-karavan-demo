@@ -1,0 +1,16 @@
+- route:
+    id: route-0817
+    nodePrefixId: route-58f
+    from:
+      id: from-544c
+      uri: kamelet:timer-source
+      parameters:
+        message: Hello
+        repeatCount: 20
+      steps:
+        - process:
+            id: process-89a9
+            ref: CustomProcessor
+        - log:
+            id: log-e539
+            message: ${body} World
