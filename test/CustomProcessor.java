@@ -8,6 +8,6 @@ import org.apache.camel.Processor;
 public class CustomProcessor implements Processor {
 
     public void process(Exchange exchange) throws Exception {
-        exchange.getIn().setBody("Hello Java World");
+        exchange.getIn().setBody("Hello Java Champion");
     }
 }
