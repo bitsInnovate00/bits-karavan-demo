@@ -16,7 +16,7 @@
             description: offersvc
             uri: rest
             parameters:
-              path: offersvc.karavan.svc.cluster.local:80/offer
+              path: offer
               method: get
               consumes: application/text
               produces: application/text
