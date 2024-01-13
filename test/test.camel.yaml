@@ -22,6 +22,13 @@
               produces: application/text
               bindingMode: auto
               host: offersvc.karavan.svc.cluster.local:80
+        - to:
+            id: to-de04
+            description: ancillary
+            uri: rest
+            parameters:
+              method: post
+              path: ancillary
         - log:
             id: log-e539
             message: ${body} World
