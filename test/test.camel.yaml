@@ -6,11 +6,21 @@
       uri: kamelet:timer-source
       parameters:
         message: Hello
-        repeatCount: 20
+        repeatCount: 200
       steps:
         - process:
             id: process-89a9
             ref: CustomProcessor
+        - to:
+            id: to-b377
+            description: offersvc
+            uri: rest
+            parameters:
+              path: offersvc.karavan.svc.cluster.local:80/offer
+              method: get
+              consumes: application/text
+              produces: application/text
+              bindingMode: auto
         - log:
             id: log-e539
             message: ${body} World
