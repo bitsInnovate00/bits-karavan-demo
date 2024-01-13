@@ -21,6 +21,7 @@
               consumes: application/text
               produces: application/text
               bindingMode: auto
+              host: offersvc.karavan.svc.cluster.local:80
         - log:
             id: log-e539
             message: ${body} World
