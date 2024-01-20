@@ -1,0 +1,22 @@
+- rest:
+    id: rest-6ed3
+    post:
+      - id: post-fe4d
+        path: offer
+        consumes: application/xml
+        produces: application/xml
+        bindingMode: xml
+- route:
+    id: route-8665
+    nodePrefixId: route-bda
+    from:
+      id: from-862a
+      uri: direct
+      steps:
+        - setHeader:
+            id: setHeader-b46b
+            expression:
+              simple:
+                id: simple-9615
+        - process:
+            id: process-26b2
